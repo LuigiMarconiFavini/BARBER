@@ -23,7 +23,7 @@ const Navbar = () => {
           </Link>
 
           <Link to="/training" className="hover:text-gray-400 transition">
-            FORMACIÓN
+            FORMACIONES
           </Link>
 
           <Link to="/manifiesto" className="hover:text-gray-400 transition">
@@ -64,7 +64,7 @@ const Navbar = () => {
           </Link>
 
           <Link to="/training" onClick={() => setMenuOpen(false)}>
-            FORMACIÓN
+            FORMACIÓN EN ACCIÓN
           </Link>
 
           <Link to="/manifiesto" onClick={() => setMenuOpen(false)}>

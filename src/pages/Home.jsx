@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import hero from "../assets/hero/hero.jpeg";
 import texture from "../assets/textures/concrete.jpg";
+import foto5 from "../assets/manifiesto/foto5.jpeg";
+import icon4 from "../assets/hero/icon4.jpeg";
 
 import trabajo1 from "../assets/portfolio/trabajo1.jpeg";
 import trabajo2 from "../assets/portfolio/trabajo2.jpeg";
@@ -12,7 +14,7 @@ const Home = () => {
     <>
       {/* HERO */}
       <section
-        className="relative min-h-screen flex items-center px-16 md:px-24 text-white"
+        className="relative min-h-screen flex items-center px-10 md:px-24 text-white pb-20 md:pb-0"
         style={{
           backgroundImage: `url(${hero})`,
           backgroundSize: "cover",
@@ -39,7 +41,7 @@ const Home = () => {
 
           <Link
             to="/programs"
-            className="inline-block mt-12 border border-white px-8 py-4 text-sm tracking-widest hover:bg-white hover:text-black transition"
+            className="inline-block mt-16 border border-white px-8 py-4 text-sm tracking-widest hover:bg-white hover:text-black transition"
           >
             EXPLORAR EL MÉTODO
           </Link>
@@ -82,11 +84,11 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="hidden md:block h-[420px] overflow-hidden">
+          <div className="hidden md:block h-[420px] overflow-hidden rounded-lg shadow-lg group">
             <img
-              src={trabajo1}
+              src={icon4}
               alt="Formación barbería"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         </div>
@@ -98,14 +100,16 @@ const Home = () => {
       {/* FORMACION EN ACCION */}
       <section className="py-28 px-10 bg-black text-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-          <div className="hidden md:block h-[420px] overflow-hidden">
+          {/* FOTO con hover y cara visible */}
+          <div className="hidden md:block h-[420px] overflow-hidden rounded-lg group">
             <img
-              src={trabajo2}
+              src={foto5}
               alt="Formación real"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top transform transition-transform duration-500 group-hover:scale-105"
             />
           </div>
 
+          {/* TEXTO */}
           <div>
             <h2 className="text-4xl font-bold mb-6 tracking-tight">
               FORMACIÓN EN ACCIÓN

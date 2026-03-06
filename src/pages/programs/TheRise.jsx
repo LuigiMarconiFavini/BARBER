@@ -79,6 +79,8 @@ const TheRise = () => {
           </div>
         </div>
 
+        <div className="text-center border-t border-gray-800 pt-16"></div>
+
         {/* FILOSOFIA */}
         <div className="mb-24 text-center">
           <h2 className="text-3xl font-bold mb-6">KEEP IT SIMPLE</h2>

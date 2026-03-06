@@ -1,28 +1,19 @@
 import foto5 from "../assets/manifiesto/foto5.jpeg";
-import texture from "../assets/textures/concrete.jpg";
 
 const Manifesto = () => {
   return (
     <section
       id="manifesto"
-      className="py-28 px-10 text-white relative"
+      className="relative min-h-[120vh] flex items-center px-10 text-white" // sección más alta
       style={{
-        backgroundImage: `url(${texture})`,
-        backgroundBlendMode: "overlay",
+        backgroundImage: `url(${foto5})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundColor: "#111",
+        backgroundPosition: "center 20%", // ajusta la cabeza + torso
+        backgroundRepeat: "no-repeat",
       }}
     >
-      {/* FOTO COMO FONDO SOLO EN MOBILE */}
-      <div
-        className="absolute inset-0 md:hidden opacity-25"
-        style={{
-          backgroundImage: `url(${foto5})`,
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-        }}
-      ></div>
+      {/* Overlay para legibilidad */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* TEXTO */}
@@ -49,14 +40,7 @@ const Manifesto = () => {
           </div>
         </div>
 
-        {/* FOTO SOLO DESKTOP */}
-        <div className="h-[520px] overflow-hidden hidden md:block">
-          <img
-            src={foto5}
-            alt="Pablo Muñoz"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
+        {/* En desktop ya no necesitamos la foto */}
       </div>
     </section>
   );

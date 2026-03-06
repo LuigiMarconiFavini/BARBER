@@ -12,7 +12,7 @@ import trabajo11 from "../assets/portfolio/trabajo11.jpeg";
 import trabajo12 from "../assets/portfolio/trabajo12.jpeg";
 
 const Portfolio = () => {
-  const images = [trabajo1, trabajo2, trabajo3, trabajo4, trabajo5, trabajo6, trabajo7, trabajo8, trabajo9, trabajo10, trabajo11, trabajo12];
+  const images = [trabajo4, trabajo5, trabajo2, trabajo7, trabajo6, trabajo1, trabajo8, trabajo11, trabajo10, trabajo3, trabajo9, trabajo12];
 
   return (
     <section className="min-h-screen bg-[#0e0e0e] px-6 md:px-10 py-24">

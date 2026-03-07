@@ -1,37 +1,37 @@
+import { useLanguage } from "../context/LanguageContext";
+
 const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-[#0e0e0e] text-white py-28 px-6">
       <div className="max-w-4xl mx-auto text-center">
         {/* TITULO */}
-        <h2 className="text-4xl font-bold tracking-wide mb-8">CONTACTO</h2>
+        <h2 className="text-4xl font-bold tracking-wide mb-8">
+          {t.contact.title}
+        </h2>
 
         {/* TEXTO */}
-        <p className="text-gray-300 mb-12 leading-relaxed">
-          Si querés llevar esta formación a tu ciudad, organizar una masterclass
-          o ponerte en contacto por colaboraciones, podés hacerlo a través de
-          los siguientes medios.
-        </p>
+        <p className="text-gray-300 mb-12 leading-relaxed">{t.contact.text}</p>
 
         {/* BOTONES */}
         <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
-          {/* WHATSAPP - CTA PRINCIPAL */}
           <a
             href="https://wa.me/5493413826774?text=Hola%20Pablo,%20quiero%20información%20sobre%20tus%20programas."
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-black px-8 py-3 text-sm tracking-widest hover:bg-gray-200 transition"
           >
-            WHATSAPP
+            {t.contact.whatsapp}
           </a>
 
-          {/* EMAIL */}
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=pabloalemunoz@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white px-8 py-3 text-sm tracking-widest hover:bg-white hover:text-black transition"
           >
-            ENVIAR EMAIL
+            {t.contact.email}
           </a>
         </div>
 
@@ -46,7 +46,7 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="hover:text-white transition"
           >
-            INSTAGRAM
+            {t.contact.instagram}
           </a>
 
           <a
@@ -55,7 +55,7 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="hover:text-white transition"
           >
-            TIKTOK
+            {t.contact.tiktok}
           </a>
 
           <a
@@ -64,22 +64,18 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="hover:text-white transition"
           >
-            YOUTUBE
+            {t.contact.youtube}
           </a>
         </div>
 
         {/* CIERRE FILOSOFICO */}
         <div className="border-t border-gray-800 pt-20">
-          <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-            NO ES UN CORTE.
-            <br />
-            ES UNA DECISIÓN.
+          <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 whitespace-pre-line">
+            {t.contact.closingTitle}
           </h3>
 
-          <p className="text-gray-400 leading-relaxed">
-            Un sueño sin acción sigue siendo solo un sueño.
-            <br />
-            La acción es lo que lo convierte en resultado.
+          <p className="text-gray-400 leading-relaxed whitespace-pre-line">
+            {t.contact.closingText}
           </p>
         </div>
       </div>

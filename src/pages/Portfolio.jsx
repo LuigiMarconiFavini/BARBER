@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../i18n/translations";
 
 import trabajo1 from "../assets/portfolio/trabajo1.jpeg";
 import trabajo2 from "../assets/portfolio/trabajo2.jpeg";
@@ -14,6 +16,9 @@ import trabajo11 from "../assets/portfolio/trabajo11.jpeg";
 import trabajo12 from "../assets/portfolio/trabajo12.jpeg";
 
 const Portfolio = () => {
+  const { language } = useLanguage();
+  const t = translations[language].portfolio;
+
   const images = [
     { src: trabajo4, position: "center 20%" },
     { src: trabajo5, position: "center 16%" },
@@ -39,7 +44,6 @@ const Portfolio = () => {
     setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // desactivar scroll cuando modal abierto
   useEffect(() => {
     if (selectedIndex !== null) {
       document.body.style.overflow = "hidden";
@@ -54,13 +58,10 @@ const Portfolio = () => {
         {/* TITULO */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            PORTFOLIO
+            {t.title}
           </h2>
 
-          <p className="text-gray-400 mt-4 max-w-xl">
-            Precisión técnica, estética cuidada y una identidad visual clara
-            aplicada a cada trabajo realizado.
-          </p>
+          <p className="text-gray-400 mt-4 max-w-xl">{t.description}</p>
         </div>
 
         {/* GALERIA */}
@@ -85,7 +86,6 @@ const Portfolio = () => {
       {/* LIGHTBOX */}
       {selectedIndex !== null && (
         <div className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 animate-fadeUp">
-          {/* BOTON CERRAR */}
           <button
             onClick={() => setSelectedIndex(null)}
             className="absolute top-6 right-8 text-white text-4xl"
@@ -93,7 +93,6 @@ const Portfolio = () => {
             ✕
           </button>
 
-          {/* FLECHA IZQUIERDA */}
           <button
             onClick={prevImage}
             className="absolute left-6 text-white text-5xl"
@@ -101,13 +100,11 @@ const Portfolio = () => {
             ‹
           </button>
 
-          {/* IMAGEN */}
           <img
             src={images[selectedIndex].src}
             className="max-h-[90vh] max-w-[90vw] object-contain transition duration-500"
           />
 
-          {/* FLECHA DERECHA */}
           <button
             onClick={nextImage}
             className="absolute right-6 text-white text-5xl"

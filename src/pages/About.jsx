@@ -2,8 +2,11 @@ import foto1 from "../assets/about/foto1.jpeg";
 import foto2 from "../assets/about/foto2.jpeg";
 import foto3 from "../assets/about/foto3.jpeg";
 import foto4 from "../assets/about/foto4.jpeg";
+import { useLanguage } from "../context/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       className="relative text-white pt-16 pb-20 md:py-28 px-6"
@@ -19,7 +22,6 @@ const About = () => {
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
         {/* GALERIA */}
         <div className="grid grid-cols-2 gap-6 order-2 md:order-1">
-          {/* FOTO PRINCIPAL */}
           <div className="col-span-2 overflow-hidden fade-up">
             <img
               src={foto4}
@@ -28,7 +30,6 @@ const About = () => {
             />
           </div>
 
-          {/* FOTO FAMILIA */}
           <div className="overflow-hidden fade-up-delay">
             <img
               src={foto1}
@@ -37,7 +38,6 @@ const About = () => {
             />
           </div>
 
-          {/* FOTO HIJO */}
           <div className="overflow-hidden fade-up-delay2">
             <img
               src={foto2}
@@ -46,7 +46,6 @@ const About = () => {
             />
           </div>
 
-          {/* FOTO FINAL */}
           <div className="col-span-2 overflow-hidden fade-up-delay3">
             <img
               src={foto3}
@@ -58,35 +57,17 @@ const About = () => {
 
         {/* TEXTO */}
         <div className="fade-up order-1 md:order-2">
-          <h2 className="text-4xl font-bold mb-10 tracking-wide">QUIÉN SOY</h2>
+          <h2 className="text-4xl font-bold mb-10 tracking-wide">
+            {t.about.title}
+          </h2>
 
-          <p className="text-gray-300 leading-relaxed mb-6">
-            Además de ser peluquero, barbero y educador, también soy padre,
-            marido y atleta.
-          </p>
+          <p className="text-gray-300 leading-relaxed mb-6">{t.about.p1}</p>
+          <p className="text-gray-300 leading-relaxed mb-6">{t.about.p2}</p>
+          <p className="text-gray-300 leading-relaxed mb-6">{t.about.p3}</p>
+          <p className="text-gray-300 leading-relaxed mb-10">{t.about.p4}</p>
 
-          <p className="text-gray-300 leading-relaxed mb-6">
-            Creo profundamente en el equilibrio. La disciplina, la familia y el
-            trabajo no son mundos separados, forman parte de la misma
-            construcción.
-          </p>
-
-          <p className="text-gray-300 leading-relaxed mb-6">
-            Ese equilibrio es el que me permite sostener mi crecimiento
-            profesional, seguir aprendiendo y transmitir lo que enseño con
-            coherencia.
-          </p>
-
-          <p className="text-gray-300 leading-relaxed mb-10">
-            Porque antes que educador, soy persona.
-          </p>
-
-          {/* FRASE DESTACADA */}
           <div className="border-l-2 border-white pl-6">
-            <p className="text-lg font-medium">
-              El crecimiento profesional real se construye cuando existe
-              equilibrio entre la vida personal, la disciplina y la vocación.
-            </p>
+            <p className="text-lg font-medium">{t.about.highlight}</p>
           </div>
         </div>
       </div>

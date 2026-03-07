@@ -9,7 +9,11 @@ import preview1 from "../assets/training/preview1.jpg";
 import preview2 from "../assets/training/preview2.jpg";
 import preview3 from "../assets/training/preview3.jpg";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Training = () => {
+  const { t } = useLanguage();
+
   return (
     <>
       {/* SECCION INTRO */}
@@ -26,18 +30,17 @@ const Training = () => {
 
         <div className="relative max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-wide mb-10">
-            FORMACIÓN EN ACCIÓN
+            {t.training.intro.title}
           </h2>
 
           <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-            La barbería no se aprende copiando cortes.
+            {t.training.intro.p1}
             <br />
             <br />
-            Se aprende entendiendo el sistema detrás de cada decisión.
+            {t.training.intro.p2}
             <br />
             <br />
-            Cada formación está diseñada para que el alumno desarrolle criterio,
-            técnica y una forma profesional de pensar el oficio.
+            {t.training.intro.p3}
           </p>
         </div>
       </section>
@@ -51,24 +54,20 @@ const Training = () => {
           {/* TEXTO */}
           <div className="md:w-1/2 order-1 md:order-2 z-10">
             <h3 className="text-2xl md:text-3xl font-semibold mb-6 tracking-wide">
-              ALUMNOS INTERNACIONALES
+              {t.training.featuredStudent.title}
             </h3>
 
             <p className="text-gray-300 leading-relaxed mb-4">
-              Algunos alumnos viajan desde otros países para realizar
-              formaciones personalizadas 1 a 1.
+              {t.training.featuredStudent.p1}
             </p>
 
             <p className="text-gray-300 leading-relaxed">
-              La formación se adapta al nivel del profesional, trabajando
-              técnica, criterio y desarrollo del sistema aplicado a su propia
-              barbería.
+              {t.training.featuredStudent.p2}
             </p>
           </div>
 
           {/* IMAGEN */}
           <div className="w-full md:w-1/2 order-2 md:order-1 relative flex justify-center items-start">
-            {/* Fondo textura */}
             <div className="absolute inset-0 rounded-xl overflow-hidden">
               <div
                 className="w-full h-full bg-cover bg-center opacity-20"
@@ -97,7 +96,7 @@ const Training = () => {
       <section className="py-28 px-6 bg-[#0e0e0e] text-white">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-semibold text-center mb-16 tracking-wide">
-            CLASES REALES
+            {t.training.videos.title}
           </h3>
 
           <div className="grid md:grid-cols-3 gap-10 justify-items-center">

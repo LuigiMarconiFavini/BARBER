@@ -1,63 +1,65 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-black text-white border-t border-gray-800 px-6 py-16">
       <div className="max-w-6xl mx-auto">
         {/* LOGO / NOMBRE */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold tracking-wide">PABLO MUÑOZ</h3>
-          <p className="text-gray-400 text-sm mt-2">
-            Sistema técnico y empresarial para barberos.
-          </p>
+          <h3 className="text-2xl font-bold tracking-wide">{t.footer.logo}</h3>
+          <p className="text-gray-400 text-sm mt-2">{t.footer.subtitle}</p>
         </div>
 
         {/* GRID FOOTER */}
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* NAVEGACION */}
           <div>
-            <h4 className="font-semibold mb-4">NAVEGACIÓN</h4>
+            <h4 className="font-semibold mb-4">{t.footer.navigation}</h4>
 
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
                 <Link to="/" className="hover:text-white transition">
-                  Inicio
+                  {t.footer.home}
                 </Link>
               </li>
 
               <li>
                 <Link to="/portfolio" className="hover:text-white transition">
-                  Portfolio
+                  {t.footer.portfolio}
                 </Link>
               </li>
 
               <li>
                 <Link to="/programs" className="hover:text-white transition">
-                  Programas Educativos
+                  {t.footer.programs}
                 </Link>
               </li>
 
               <li>
                 <Link to="/training" className="hover:text-white transition">
-                  Formaciones
+                  {t.footer.training}
                 </Link>
               </li>
 
               <li>
                 <Link to="/manifiesto" className="hover:text-white transition">
-                  Manifiesto
+                  {t.footer.manifesto}
                 </Link>
               </li>
 
               <li>
                 <Link to="/about" className="hover:text-white transition">
-                  Sobre mí
+                  {t.footer.about}
                 </Link>
               </li>
 
               <li>
                 <Link to="/contact" className="hover:text-white transition">
-                  Contacto
+                  {t.footer.contact}
                 </Link>
               </li>
             </ul>
@@ -65,7 +67,7 @@ const Footer = () => {
 
           {/* PROGRAMAS */}
           <div>
-            <h4 className="font-semibold mb-4">PROGRAMAS</h4>
+            <h4 className="font-semibold mb-4">{t.footer.programsTitle}</h4>
 
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
@@ -73,7 +75,7 @@ const Footer = () => {
                   to="programs/the-rise"
                   className="hover:text-white transition"
                 >
-                  The Rise
+                  {t.footer.theRise}
                 </Link>
               </li>
 
@@ -82,17 +84,17 @@ const Footer = () => {
                   to="programs/initium"
                   className="hover:text-white transition"
                 >
-                  Initium
+                  {t.footer.initium}
                 </Link>
               </li>
 
-              <li>Curso Online (Próximamente)</li>
+              <li>{t.footer.onlineCourse}</li>
             </ul>
           </div>
 
           {/* CONTACTO */}
           <div>
-            <h4 className="font-semibold mb-4">CONTACTO</h4>
+            <h4 className="font-semibold mb-4">{t.footer.contactTitle}</h4>
 
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
@@ -101,7 +103,7 @@ const Footer = () => {
                   target="_blank"
                   className="hover:text-white transition"
                 >
-                  WhatsApp
+                  {t.footer.whatsapp}
                 </a>
               </li>
 
@@ -112,7 +114,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
                 >
-                  pabloalemunoz@gmail.com
+                  {t.footer.email}
                 </a>
               </li>
             </ul>
@@ -125,28 +127,27 @@ const Footer = () => {
             href="https://www.instagram.com/pablomunoz.oka/"
             className="hover:text-white transition"
           >
-            INSTAGRAM
+            {t.footer.socialInstagram}
           </a>
 
           <a
             href="https://www.tiktok.com/@pablomunozoka"
             className="hover:text-white transition"
           >
-            TIKTOK
+            {t.footer.socialTikTok}
           </a>
 
           <a
             href="https://www.youtube.com/@Pablomunozoka"
             className="hover:text-white transition"
           >
-            YOUTUBE
+            {t.footer.socialYoutube}
           </a>
         </div>
 
         {/* COPYRIGHT */}
         <div className="text-gray-500 text-sm border-t border-gray-800 pt-6">
-          © {new Date().getFullYear()} Pablo Muñoz — Todos los derechos
-          reservados
+          {t.footer.copyright.replace("{year}", year)}
         </div>
       </div>
     </footer>

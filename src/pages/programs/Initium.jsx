@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import texture from "../../assets/textures/concrete.jpg";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Initium = () => {
+  const { t } = useLanguage();
   const whatsappLink = "https://wa.me/5493413826774";
 
   return (
@@ -20,130 +22,111 @@ const Initium = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">INITIUM</h1>
 
           <p className="text-gray-400 text-lg mb-8">
-            Sistema de gestión para barberos.
+            {t.initium.hero.subtitle}
           </p>
 
           <p className="text-gray-300 leading-relaxed mb-6">
-            INITIUM nace de una realidad que muchos profesionales descubren con
-            el tiempo: cortar bien no es suficiente.
+            {t.initium.hero.p1}
           </p>
 
-          <p className="text-gray-300 leading-relaxed">
-            Para crecer, es necesario aprender a gestionar el negocio y comenzar
-            a pensar la barbería como una empresa.
-          </p>
+          <p className="text-gray-300 leading-relaxed">{t.initium.hero.p2}</p>
         </div>
 
-        {/* QUE ES INITIUM */}
+        {/* WHAT IS INITIUM */}
         <div className="mb-24">
-          <h2 className="text-3xl font-bold mb-8">QUÉ ES INITIUM</h2>
+          <h2 className="text-3xl font-bold mb-8">{t.initium.whatIs.title}</h2>
 
           <p className="text-gray-300 leading-relaxed mb-6">
-            INITIUM es un sistema de gestión diseñado para dueños de barberías,
-            peluquerías y profesionales independientes que desean transformar su
-            trabajo en un proyecto empresarial estructurado.
+            {t.initium.whatIs.text1}
           </p>
 
           <p className="text-gray-300 leading-relaxed">
-            No es solo una capacitación. Es una metodología que permite entender
-            el salón como una empresa y aprender a gestionar todas las áreas
-            necesarias para que el negocio crezca de forma sostenible.
+            {t.initium.whatIs.text2}
           </p>
         </div>
 
-        {/* QUE APRENDE */}
+        {/* LEARNING */}
         <div className="mb-24">
-          <h2 className="text-3xl font-bold mb-12">QUÉ APRENDE UN ALUMNO</h2>
+          <h2 className="text-3xl font-bold mb-12">
+            {t.initium.learning.title}
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-10">
             <div className="border border-[#2a2a2a] p-8">
               <p className="text-gray-300 text-sm">
-                Gestionar el salón como una empresa
+                {t.initium.learning.item1}
               </p>
             </div>
-
             <div className="border border-[#2a2a2a] p-8">
               <p className="text-gray-300 text-sm">
-                Entender y controlar los costos reales del negocio
+                {t.initium.learning.item2}
               </p>
             </div>
-
             <div className="border border-[#2a2a2a] p-8">
               <p className="text-gray-300 text-sm">
-                Planificar financieramente su actividad
+                {t.initium.learning.item3}
               </p>
             </div>
-
             <div className="border border-[#2a2a2a] p-8">
               <p className="text-gray-300 text-sm">
-                Desarrollar una marca sólida que conecte con los clientes
+                {t.initium.learning.item4}
               </p>
             </div>
-
             <div className="border border-[#2a2a2a] p-8">
               <p className="text-gray-300 text-sm">
-                Mejorar la experiencia del cliente dentro del salón
+                {t.initium.learning.item5}
               </p>
             </div>
-
             <div className="border border-[#2a2a2a] p-8">
               <p className="text-gray-300 text-sm">
-                Organizar equipos de trabajo y liderar personas
+                {t.initium.learning.item6}
               </p>
             </div>
           </div>
         </div>
 
-        {/* A QUIEN ESTA DIRIGIDO */}
-        <div className="mb-24">
-          <h2 className="text-3xl font-bold mb-8">A QUIÉN ESTÁ DIRIGIDO</h2>
-
-          <ul className="text-gray-300 space-y-3">
-            <li>• Dueños de barberías</li>
-            <li>• Dueños de peluquerías</li>
-            <li>• Barberos independientes</li>
-            <li>• Profesionales que desean abrir su propio salón</li>
-            <li>• Barberos que trabajan mucho pero no logran escalar</li>
-          </ul>
-        </div>
-
-        {/* RESULTADOS */}
-        <div className="mb-24">
-          <h2 className="text-3xl font-bold mb-8">RESULTADOS DEL SISTEMA</h2>
-
-          <ul className="text-gray-300 space-y-3">
-            <li>• mayor control sobre los números del negocio</li>
-            <li>• una estructura de trabajo más ordenada</li>
-            <li>• mejor posicionamiento de marca</li>
-            <li>• clientes más satisfechos y recurrentes</li>
-            <li>• equipos de trabajo más comprometidos</li>
-            <li>• visión estratégica del crecimiento del salón</li>
-          </ul>
-        </div>
-
-        {/* FORMATO */}
+        {/* AUDIENCE */}
         <div className="mb-24">
           <h2 className="text-3xl font-bold mb-8">
-            FORMATO DE LAS FORMACIONES
+            {t.initium.audience.title}
           </h2>
 
-          <p className="text-gray-300 leading-relaxed mb-6">
-            El sistema INITIUM se trabaja principalmente en formato
-            personalizado para adaptar la metodología a la realidad de cada
-            barbería o negocio.
-          </p>
+          <ul className="text-gray-300 space-y-3">
+            <li>{t.initium.audience.item1}</li>
+            <li>{t.initium.audience.item2}</li>
+            <li>{t.initium.audience.item3}</li>
+            <li>{t.initium.audience.item4}</li>
+            <li>{t.initium.audience.item5}</li>
+          </ul>
+        </div>
 
-          <p className="text-gray-300">
-            Más de 20 profesionales ya han trabajado el sistema con resultados
-            destacables.
+        {/* RESULTS */}
+        <div className="mb-24">
+          <h2 className="text-3xl font-bold mb-8">{t.initium.results.title}</h2>
+
+          <ul className="text-gray-300 space-y-3">
+            <li>{t.initium.results.item1}</li>
+            <li>{t.initium.results.item2}</li>
+            <li>{t.initium.results.item3}</li>
+            <li>{t.initium.results.item4}</li>
+            <li>{t.initium.results.item5}</li>
+            <li>{t.initium.results.item6}</li>
+          </ul>
+        </div>
+
+        {/* FORMAT */}
+        <div className="mb-24">
+          <h2 className="text-3xl font-bold mb-8">{t.initium.format.title}</h2>
+
+          <p className="text-gray-300 leading-relaxed mb-6">
+            {t.initium.format.p1}
           </p>
+          <p className="text-gray-300">{t.initium.format.p2}</p>
         </div>
 
         {/* CTA */}
         <div className="text-center border-t border-gray-800 pt-16">
-          <p className="text-xl mb-8">
-            De trabajador del oficio a gestor de una empresa.
-          </p>
+          <p className="text-xl mb-8">{t.initium.cta.phrase}</p>
 
           <a
             href={whatsappLink}
@@ -151,7 +134,7 @@ const Initium = () => {
             rel="noopener noreferrer"
             className="border border-white px-8 py-3 text-sm tracking-widest hover:bg-white hover:text-black transition"
           >
-            CONSULTAR FORMACIÓN
+            {t.initium.cta.button}
           </a>
 
           <div className="mt-8">
@@ -159,7 +142,7 @@ const Initium = () => {
               to="/programs"
               className="text-gray-400 hover:text-white transition"
             >
-              Volver a programas
+              {t.initium.cta.back}
             </Link>
           </div>
         </div>

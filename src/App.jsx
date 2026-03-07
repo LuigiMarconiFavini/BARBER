@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,25 +16,29 @@ import Initium from "./pages/programs/Initium";
 
 function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <Navbar />
+    <>
+      <ScrollToTop />
 
-      <main className="pt-24 pb-24">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/programs/the-rise" element={<TheRise />} />
-          <Route path="/programs/initium" element={<Initium />} />
-          <Route path="/training" element={<Training />} />
-          <Route path="/manifiesto" element={<Manifiesto />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
+      <div className="bg-black text-white min-h-screen">
+        <Navbar />
 
-      <Footer />
-    </div>
+        <main className="pt-24 min-h-screen">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/programs/the-rise" element={<TheRise />} />
+            <Route path="/programs/initium" element={<Initium />} />
+            <Route path="/training" element={<Training />} />
+            <Route path="/manifiesto" element={<Manifiesto />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </>
   );
 }
 

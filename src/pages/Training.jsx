@@ -1,8 +1,13 @@
 import texture from "../assets/textures/concrete.jpg";
 import alumno from "../assets/training/alumno-ecuador.jpeg";
+
 import video1 from "../assets/training/video1.mp4";
 import video2 from "../assets/training/video2.mp4";
 import video3 from "../assets/training/video3.mp4";
+
+import preview1 from "../assets/training/preview1.jpg";
+import preview2 from "../assets/training/preview2.jpg";
+import preview3 from "../assets/training/preview3.jpg";
 
 const Training = () => {
   return (
@@ -43,7 +48,7 @@ const Training = () => {
       {/* ALUMNO DESTACADO */}
       <section className="relative py-24 md:py-48 px-6 text-white bg-[#0b0b0b]">
         <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-          {/* TEXTO primero en mobile */}
+          {/* TEXTO */}
           <div className="md:w-1/2 order-1 md:order-2 z-10">
             <h3 className="text-2xl md:text-3xl font-semibold mb-6 tracking-wide">
               ALUMNOS INTERNACIONALES
@@ -61,11 +66,14 @@ const Training = () => {
             </p>
           </div>
 
-          {/* IMAGEN con fondo sutil y hover */}
+          {/* IMAGEN */}
           <div className="w-full md:w-1/2 order-2 md:order-1 relative flex justify-center items-start">
-            {/* Fondo sutil detrás de la foto */}
+            {/* Fondo textura */}
             <div className="absolute inset-0 rounded-xl overflow-hidden">
-              <div className="w-full h-full bg-[url('../assets/textures/concrete.jpg')] bg-cover bg-center opacity-20"></div>
+              <div
+                className="w-full h-full bg-cover bg-center opacity-20"
+                style={{ backgroundImage: `url(${texture})` }}
+              ></div>
             </div>
 
             <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden rounded-lg group z-10">
@@ -74,9 +82,8 @@ const Training = () => {
                 alt="Alumno internacional"
                 className="w-full h-full object-cover object-top transform transition-transform duration-500 group-hover:scale-105"
               />
-              {/* Overlay oscuro encima de la imagen */}
+
               <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
-              {/* Fondo difuminado detrás para que no parezca pegada */}
               <div className="absolute -inset-4 bg-black/30 blur-xl z-0 rounded-xl"></div>
             </div>
           </div>
@@ -96,21 +103,24 @@ const Training = () => {
           <div className="grid md:grid-cols-3 gap-10 justify-items-center">
             <video
               controls
-              className="w-full max-w-[280px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
+              poster={preview1}
+              className="w-full max-w-[320px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
             >
               <source src={video1} type="video/mp4" />
             </video>
 
             <video
               controls
-              className="w-full max-w-[280px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
+              poster={preview2}
+              className="w-full max-w-[320px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
             >
               <source src={video2} type="video/mp4" />
             </video>
 
             <video
               controls
-              className="w-full max-w-[280px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
+              poster={preview3}
+              className="w-full max-w-[320px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
             >
               <source src={video3} type="video/mp4" />
             </video>

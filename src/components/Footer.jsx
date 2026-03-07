@@ -68,8 +68,24 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">PROGRAMAS</h4>
 
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>The Rise</li>
-              <li>Initium</li>
+              <li>
+                <Link
+                  to="programs/the-rise"
+                  className="hover:text-white transition"
+                >
+                  The Rise
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="programs/initium"
+                  className="hover:text-white transition"
+                >
+                  Initium
+                </Link>
+              </li>
+
               <li>Curso Online (Próximamente)</li>
             </ul>
           </div>
@@ -89,7 +105,16 @@ const Footer = () => {
                 </a>
               </li>
 
-              <li>pabloalemunoz@gmail.com</li>
+              <li>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=pabloalemunoz@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                >
+                  pabloalemunoz@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>

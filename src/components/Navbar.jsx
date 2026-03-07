@@ -55,27 +55,27 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col items-center gap-6 py-6 text-sm tracking-wider text-white">
-          <Link to="/portfolio" onClick={() => setMenuOpen(false)}>
+          <Link to="/portfolio" onClick={() => setMenuOpen(false)} className="block">
             PORTFOLIO
           </Link>
 
-          <Link to="/programs" onClick={() => setMenuOpen(false)}>
+          <Link to="/programs" onClick={() => setMenuOpen(false)} className="block">
             PROGRAMAS EDUCATIVOS
           </Link>
 
-          <Link to="/training" onClick={() => setMenuOpen(false)}>
+          <Link to="/training" onClick={() => setMenuOpen(false)} className="block">
             FORMACIÓN EN ACCIÓN
           </Link>
 
-          <Link to="/manifiesto" onClick={() => setMenuOpen(false)}>
+          <Link to="/manifiesto" onClick={() => setMenuOpen(false)} className="block">
             MANIFIESTO
           </Link>
 
-          <Link to="/about" onClick={() => setMenuOpen(false)}>
+          <Link to="/about" onClick={() => setMenuOpen(false)} className="block">
             SOBRE MÍ
           </Link>
 
-          <Link to="/contact" onClick={() => setMenuOpen(false)}>
+          <Link to="/contact" onClick={() => setMenuOpen(false)} className="block">
             CONTACTO
           </Link>
         </div>

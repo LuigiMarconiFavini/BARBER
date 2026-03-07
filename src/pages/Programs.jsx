@@ -79,7 +79,7 @@ const Programs = () => {
             </p>
 
             <Link
-              to="/programs/the-rise"
+              to="/programs/initium"
               className="border border-white px-5 py-2 text-sm tracking-wider hover:bg-white hover:text-black transition"
             >
               CONOCER MÁS

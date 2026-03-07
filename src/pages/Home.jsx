@@ -4,16 +4,17 @@ import texture from "../assets/textures/concrete.jpg";
 import foto5 from "../assets/manifiesto/foto5.jpeg";
 import icon4 from "../assets/hero/icon4.jpeg";
 
-import trabajo1 from "../assets/portfolio/trabajo1.jpeg";
 import trabajo2 from "../assets/portfolio/trabajo2.jpeg";
-import trabajo3 from "../assets/portfolio/trabajo3.jpeg";
+import trabajo5 from "../assets/portfolio/trabajo5.jpeg";
 import trabajo4 from "../assets/portfolio/trabajo4.jpeg";
+import trabajo7 from "../assets/portfolio/trabajo7.jpeg";
 
 const Home = () => {
   return (
     <>
       {/* HERO */}
       <section
+        id="home"
         className="relative min-h-screen flex items-center px-10 md:px-24 text-white pb-20 md:pb-0"
         style={{
           backgroundImage: `url(${hero})`,
@@ -53,6 +54,7 @@ const Home = () => {
 
       {/* PROGRAMAS */}
       <section
+        id="programas"
         className="py-28 px-10 bg-[#0e0e0e] text-white"
         style={{
           backgroundImage: `url(${texture})`,
@@ -98,9 +100,8 @@ const Home = () => {
       <div className="w-full h-px bg-neutral-800"></div>
 
       {/* FORMACION EN ACCION */}
-      <section className="py-28 px-10 bg-black text-white">
+      <section id="formacion" className="py-28 px-10 bg-black text-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-          {/* FOTO con hover y cara visible */}
           <div className="hidden md:block h-[420px] overflow-hidden rounded-lg group">
             <img
               src={foto5}
@@ -109,7 +110,6 @@ const Home = () => {
             />
           </div>
 
-          {/* TEXTO */}
           <div>
             <h2 className="text-4xl font-bold mb-6 tracking-tight">
               FORMACIÓN EN ACCIÓN
@@ -141,13 +141,14 @@ const Home = () => {
 
       {/* PORTFOLIO */}
       <section
-        className="py-28 px-10 bg-[#0e0e0e] text-white"
+        id="portfolio"
+        className="py-28 px-6 md:px-10 bg-[#0e0e0e] text-white"
         style={{
           backgroundImage: `url(${texture})`,
           backgroundBlendMode: "overlay",
         }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 md:gap-20 items-center">
           {/* TEXTO */}
           <div>
             <h2 className="text-4xl font-bold mb-6 tracking-tight">
@@ -172,45 +173,45 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* COMPOSICION PORTFOLIO */}
-          <div className="relative h-[460px] overflow-hidden group">
-            {/* FOTO GRANDE FONDO */}
+          {/* FOTOS */}
+          <div className="relative h-[420px] md:h-[460px] overflow-hidden group rounded-lg">
+            {/* FOTO DE FONDO */}
             <img
-              src={trabajo1}
+              src={trabajo4}
               className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-700"
               alt="corte"
             />
 
-            {/* GRID */}
-            <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-6 p-10">
-              <div className="overflow-hidden">
-                <img
-                  src={trabajo1}
-                  className="w-full h-full object-cover transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
-                  alt="corte"
-                />
-              </div>
-
-              <div className="overflow-hidden">
-                <img
-                  src={trabajo2}
-                  className="w-full h-full object-cover transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
-                  alt="corte"
-                />
-              </div>
-
-              <div className="overflow-hidden">
-                <img
-                  src={trabajo3}
-                  className="w-full h-full object-cover transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
-                  alt="corte"
-                />
-              </div>
-
-              <div className="overflow-hidden">
+            {/* GRID DE FOTOS */}
+            <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-3 md:gap-6 p-3 md:p-10">
+              <div className="overflow-hidden rounded-md">
                 <img
                   src={trabajo4}
-                  className="w-full h-full object-cover transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
+                  className="w-full h-full object-cover object-[center_33%] transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
+                  alt="corte"
+                />
+              </div>
+
+              <div className="overflow-hidden rounded-md">
+                <img
+                  src={trabajo5}
+                  className="w-full h-full object-cover object-[center_22%] transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
+                  alt="corte"
+                />
+              </div>
+
+              <div className="overflow-hidden rounded-md">
+                <img
+                  src={trabajo2}
+                  className="w-full h-full object-cover object-[center_20%] transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
+                  alt="corte"
+                />
+              </div>
+
+              <div className="overflow-hidden rounded-md">
+                <img
+                  src={trabajo7}
+                  className="w-full h-full object-cover object-[center_35%] transition duration-700 hover:scale-110 hover:-translate-y-1 shadow-lg"
                   alt="corte"
                 />
               </div>

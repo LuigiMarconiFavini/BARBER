@@ -55,25 +55,40 @@ const Home = () => {
       {/* PROGRAMAS */}
       <section
         id="programas"
-        className="py-28 px-10 bg-[#0e0e0e] text-white"
+        className="relative py-28 px-10 text-white"
         style={{
-          backgroundImage: `url(${texture})`,
-          backgroundBlendMode: "overlay",
+          backgroundImage: `url(${icon4})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-          <div>
+        {/* overlay oscuro */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        {/* textura cemento muy sutil */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url(${texture})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div>
+
+        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+          {/* TEXTO */}
+          <div className="max-w-xl">
             <h2 className="text-4xl font-bold mb-6 tracking-tight">
               PROGRAMAS EDUCATIVOS
             </h2>
 
-            <p className="text-gray-400 leading-relaxed mb-8">
+            <p className="text-gray-300 leading-relaxed mb-8">
               Sistemas de formación diseñados para transformar barberos en
               profesionales con método. THE RISE organiza la técnica. INITIUM
               organiza el negocio.
             </p>
 
-            <p className="text-gray-400 leading-relaxed mb-10">
+            <p className="text-gray-300 leading-relaxed mb-10">
               Cuando ambas estructuras se integran, el profesional deja de
               improvisar y comienza a construir su carrera con claridad.
             </p>
@@ -84,14 +99,6 @@ const Home = () => {
             >
               VER PROGRAMAS
             </Link>
-          </div>
-
-          <div className="hidden md:block h-[420px] overflow-hidden rounded-lg shadow-lg group">
-            <img
-              src={icon4}
-              alt="Formación barbería"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
           </div>
         </div>
       </section>
@@ -142,25 +149,29 @@ const Home = () => {
       {/* PORTFOLIO */}
       <section
         id="portfolio"
-        className="py-28 px-6 md:px-10 bg-[#0e0e0e] text-white"
+        className="relative py-28 px-6 md:px-10 text-white"
         style={{
           backgroundImage: `url(${texture})`,
-          backgroundBlendMode: "overlay",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 md:gap-20 items-center">
+        {/* overlay oscuro */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-16 md:gap-20 items-center">
           {/* TEXTO */}
           <div>
             <h2 className="text-4xl font-bold mb-6 tracking-tight">
               PORTFOLIO
             </h2>
 
-            <p className="text-gray-400 leading-relaxed mb-8">
+            <p className="text-gray-300 leading-relaxed mb-8">
               Precisión técnica, estética cuidada y una identidad visual clara
               aplicada a cada trabajo realizado.
             </p>
 
-            <p className="text-gray-400 leading-relaxed mb-10">
+            <p className="text-gray-300 leading-relaxed mb-10">
               Cada corte refleja una combinación entre análisis, estructura y
               styling dentro del sistema técnico desarrollado por Pablo Muñoz.
             </p>

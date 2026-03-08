@@ -148,9 +148,21 @@ const Footer = () => {
         {/* COPYRIGHT */}
         <div className="text-gray-500 text-sm border-t border-gray-800 pt-6">
           {t.footer.copyright.replace("{year}", year)}
+
+          <div className="text-gray-600 text-xs mt-2">
+            {t.footer.createdBy}{" "}
+            <a
+              href="https://portfolio-luigi-marconi-favini.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400 transition"
+            >
+              Luigi Marconi Favini
+            </a>
+          </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 

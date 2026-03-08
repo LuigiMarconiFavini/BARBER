@@ -287,6 +287,7 @@ export const translations = {
       socialTikTok: "TIKTOK",
       socialYoutube: "YOUTUBE",
       copyright: "© {year} Pablo Muñoz — Todos los derechos reservados",
+      createdBy: "Página web creada por",
     },
   },
 
@@ -579,6 +580,7 @@ export const translations = {
       socialTikTok: "TIKTOK",
       socialYoutube: "YOUTUBE",
       copyright: "© {year} Pablo Muñoz — All rights reserved",
+      createdBy: "Website created by",
     },
   },
 };

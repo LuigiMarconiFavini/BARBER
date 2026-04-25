@@ -4,10 +4,12 @@ import alumno from "../assets/training/alumno-ecuador.jpeg";
 import video1 from "../assets/training/video1.mp4";
 import video2 from "../assets/training/video2.mp4";
 import video3 from "../assets/training/video3.mp4";
+import video4 from "../assets/training/video4.mp4";
 
 import preview1 from "../assets/training/preview1.jpg";
 import preview2 from "../assets/training/preview2.jpg";
 import preview3 from "../assets/training/preview3.jpg";
+import preview4 from "../assets/training/preview4.jpeg";
 
 import { useLanguage } from "../context/LanguageContext";
 
@@ -106,6 +108,14 @@ const Training = () => {
               className="w-full max-w-[320px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
             >
               <source src={video1} type="video/mp4" />
+            </video>
+
+            <video
+              controls
+              poster={preview4}
+              className="w-full max-w-[320px] aspect-[9/16] object-cover rounded-sm shadow-lg hover:scale-[1.02] transition"
+            >
+              <source src={video4} type="video/mp4" />
             </video>
 
             <video

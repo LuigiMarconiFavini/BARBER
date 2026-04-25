@@ -14,6 +14,7 @@ import trabajo9 from "../assets/portfolio/trabajo9.jpeg";
 import trabajo10 from "../assets/portfolio/trabajo10.jpeg";
 import trabajo11 from "../assets/portfolio/trabajo11.jpeg";
 import trabajo12 from "../assets/portfolio/trabajo12.jpeg";
+import trabajo13 from "../assets/portfolio/trabajo13.PNG";
 
 const Portfolio = () => {
   const { language } = useLanguage();
@@ -32,6 +33,7 @@ const Portfolio = () => {
     { src: trabajo3, position: "center 55%" },
     { src: trabajo9, position: "center 38%" },
     { src: trabajo12, position: "center 20%" },
+    { src: trabajo13, position: "center 50%" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(null);
